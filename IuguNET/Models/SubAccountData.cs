@@ -47,10 +47,10 @@ namespace IuguNET.Models
         public string Telephone { get; set; }
 
         [JsonProperty("resp_name")]
-        public string ResponsableName { get; set; }
+        public string ResponsibleName { get; set; }
 
         [JsonProperty("resp_cpf")]
-        public string ResponsableCpf { get; set; }
+        public string ResponsibleCpf { get; set; }
 
         [JsonProperty("bank")]
         public string Bank { get; set; }

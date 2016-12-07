@@ -23,6 +23,13 @@ namespace IuguNET.Services
             return await _requestService.Get<Customer>(Token, Endpoints.CustomersAddress, string.Format("/{0}", id));
         }
 
+        public async Task<Customer> Edit(string id, string email, string name = "", string cpfCnpj = "", string ccEmails = "", string notes = "")
+        {
+            var data = new { email = email, name = name, cpf_cnpj = cpfCnpj, cc_emails = ccEmails, notes = notes };
+
+            return await _requestService.Put<Customer>(Token, string.Format("{0}/{1}", Endpoints.CustomersAddress, id), data);
+        }
+
         public async Task<Results<Customer>> List(string query = "", int limit = 100, int start = 0)
         {
             var data = new NameValueCollection();

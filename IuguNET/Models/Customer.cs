@@ -12,5 +12,7 @@ namespace IuguNET.Models
         public string Name { get; set; }
         [JsonProperty("cpf_cnpj")]
         public string CpfCnpj { get; set; }
+        [JsonProperty("notes")]
+        public string Notes { get; set; }
     }
 }

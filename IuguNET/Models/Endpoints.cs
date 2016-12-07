@@ -15,5 +15,6 @@
         public const string AccountsAddress = "accounts";
         public const string CreateAccountSubAddress = "create_account";
         public const string RequestAccountVerificationSubAddress = "request_verification";
+        public const string ConfigurationSubAddress = "configuration";
     }
 }

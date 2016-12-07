@@ -33,6 +33,18 @@ namespace IuguNET.Services
             }
         }
 
+        public async Task<T> Put<T>(string apiToken, string path, object data)
+        {
+            using (var httpClient = new HttpClient())
+            {
+                Config(httpClient, apiToken);
+                var content = RequestHelper.ToDataString(data);
+                var responseMessage = await httpClient.PutAsync(path, content);
+                var response = await responseMessage.Content.ReadAsStringAsync();
+                return JsonConvert.DeserializeObject<T>(response);
+            }
+        }
+
         private void Config(HttpClient httpClient, string apiToken)
         {
             if (!string.IsNullOrWhiteSpace(apiToken))
