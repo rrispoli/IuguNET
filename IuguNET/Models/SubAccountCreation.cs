@@ -23,6 +23,6 @@ namespace IuguNET.Models
         public string Id { get; set; }
 
         [JsonProperty("verified")]
-        public bool Verified { get; set; }
+        public bool? Verified { get; set; }
     }
 }

@@ -19,10 +19,10 @@ namespace IuguNET.Models
         public DateTime UpdatedAt { get; set; }
 
         [JsonProperty("can_receive?")]
-        public bool CanReceive { get; set; }
+        public bool? CanReceive { get; set; }
 
         [JsonProperty("is_verified?")]
-        public bool IsVerified { get; set; }
+        public bool? IsVerified { get; set; }
 
         [JsonProperty("last_verification_request_status")]
         public string LastVerificationRequestStatus { get; set; }
@@ -43,7 +43,7 @@ namespace IuguNET.Models
         public object SubscriptionsBillingDays { get; set; }
 
         [JsonProperty("disable_emails")]
-        public bool DisableEmails { get; set; }
+        public bool? DisableEmails { get; set; }
 
         [JsonProperty("last_withdraw")]
         public object LastWithdraw { get; set; }
@@ -52,40 +52,40 @@ namespace IuguNET.Models
         public string ReplyTo { get; set; }
 
         [JsonProperty("webapp_on_test_mode")]
-        public bool WebappOnTestMode { get; set; }
+        public bool? WebappOnTestMode { get; set; }
 
         [JsonProperty("marketplace")]
-        public bool Marketplace { get; set; }
+        public bool? Marketplace { get; set; }
 
         [JsonProperty("default_return_url")]
         public string DefaultReturnUrl { get; set; }
 
         [JsonProperty("credit_card_verified")]
-        public bool CreditCardVerified { get; set; }
+        public bool? CreditCardVerified { get; set; }
 
         [JsonProperty("fines")]
-        public bool Fines { get; set; }
+        public bool? Fines { get; set; }
 
         [JsonProperty("late_payment_fine")]
         public int LatePaymentFine { get; set; }
 
         [JsonProperty("per_day_interest")]
-        public bool PerDayInterest { get; set; }
+        public bool? PerDayInterest { get; set; }
 
         [JsonProperty("old_advancement")]
-        public bool OldAdvancement { get; set; }
+        public bool? OldAdvancement { get; set; }
 
         [JsonProperty("auto_withdraw")]
-        public bool AutoWithdraw { get; set; }
+        public bool? AutoWithdraw { get; set; }
 
         [JsonProperty("payment_email_notification")]
-        public bool PaymentEmailNotification { get; set; }
+        public bool? PaymentEmailNotification { get; set; }
 
         [JsonProperty("payment_email_notification_receiver")]
         public object PaymentEmailNotificationReceiver { get; set; }
 
         [JsonProperty("auto_advance")]
-        public bool AutoAdvance { get; set; }
+        public bool? AutoAdvance { get; set; }
 
         [JsonProperty("auto_advance_type")]
         public object AutoAdvanceType { get; set; }
